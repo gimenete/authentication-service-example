@@ -10,7 +10,7 @@ exports.startServer = (config, callback) => {
   app.set('view engine', 'pug')
   app.set('views', './views')
 
-  const router = authenticationService.createRouter({})
+  const router = authenticationService.createRouter({ EMAIL_PORT: 0 })
   app.use('/auth', router)
 
   app.get('/', (req, res, next) => {
