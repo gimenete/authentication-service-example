@@ -69,13 +69,12 @@ header
         a.toc.item
           i.sidebar.icon
         a.active.item(href='/') Home
-        a.item Work
-        a.item Company
-        a.item Careers
         .right.item
           if !user
-            a.ui.inverted.button(href='/auth/signin') Log in
-            a.ui.inverted.button(href='/auth/register') Sign Up
+            a.ui.inverted.button(href='/auth/signin') Sign in
+            a.ui.inverted.button(href='/auth/register') Register
+          else
+            a.ui.inverted.button(href='/logout') Log out
 
     block masthead
 

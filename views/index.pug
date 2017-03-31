@@ -8,8 +8,14 @@ block header
 
 block masthead
   .ui.text.container
-    h1.ui.inverted.header Imagine-a-Company
-    h2 Do whatever you want when you want to.
-    .ui.huge.primary.button
+    h1.ui.inverted.header Authentication service example
+    h2 Try it by signing in or registering
+    a.ui.huge.primary.button(href='/auth/signin')
       | Get Started
       i.right.arrow.icon
+
+block content
+  .ui.text.container
+    h1.ui.inverted.header Welcome!
+    p This is an example application that demonstrates the use of the <a href='https://github.com/clevertech/authentication-service'>authentication-service</a> microservice
+    p The code of the example itself can be found <a href='https://github.com/gimenete/authentication-service-example'>on GitHub</a>
