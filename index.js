@@ -59,6 +59,6 @@ exports.startServer = (callback) => {
 if (require.main === module) {
   const server = exports.startServer(() => {
     const port = server.address().port
-    console.log(`Listening on port ${port}! Visit http://127.0.0.1:${port}/auth`)
+    console.log(`Listening on port ${port}! Visit http://127.0.0.1:${port}/`)
   })
 }
