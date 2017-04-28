@@ -4,3 +4,8 @@ block content
   .ui.text.container
     h1.ui.inverted.header Welcome!
     h2 Welcome #{user.firstName} #{user.lastName}!
+
+    p: a(href=`/auth/changepassword?jwt=${jwtToken}`) Change your password
+    // p: a(href=`/auth/changeemail?jwt=${jwtToken}`) Change email
+    p: a(href=`/auth/configuretwofactor?jwt=${jwtToken}`) Configure 2FA
+

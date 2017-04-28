@@ -30,7 +30,11 @@ exports.startServer = (callback) => {
   app.get('/home', (req, res, next) => {
     const user = req.session.user
     if (!user) return res.redirect('/auth/signin')
-    res.render('home.pug', { user })
+    jwt.sign({ userId: user.id })
+      .then(jwtToken => {
+        res.render('home.pug', { user, jwtToken })
+      })
+      .catch(next)
   })
 
   app.get('/callback', (req, res, next) => {
