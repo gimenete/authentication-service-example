@@ -16,7 +16,7 @@
     "express": "^4.15.2",
     "jsonwebtoken": "^7.3.0",
     "lodash": "^4.17.4",
-    "pnp-authentication-service": "^0.1.9",
+    "pnp-authentication-service": "^0.1.10",
     "pug": "^2.0.0-beta11"
   },
   "devDependencies": {
