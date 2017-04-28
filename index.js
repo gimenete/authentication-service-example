@@ -38,6 +38,7 @@ exports.startServer = (callback) => {
   })
 
   app.get('/callback', (req, res, next) => {
+    if (!req.query.jwt) return res.redirect('/')
     jwt.verify(req.query.jwt)
       .then(data => {
         const user = _.pick(data.user, ['id', 'firstName', 'lastName', 'image'])
